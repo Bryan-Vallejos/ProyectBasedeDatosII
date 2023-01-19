@@ -1,7 +1,14 @@
+using Biblioteca_ProyectoBDII.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<BibliotecaProyectBdiiContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BibliotecaProyectBdiiContext"));
+});
 
 var app = builder.Build();
 
