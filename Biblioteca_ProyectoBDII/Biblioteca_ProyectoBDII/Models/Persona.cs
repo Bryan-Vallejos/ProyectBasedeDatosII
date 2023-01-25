@@ -5,6 +5,7 @@ namespace Biblioteca_ProyectoBDII.Models;
 
 public partial class Persona
 {
+
     public int IdPersona { get; set; }
 
     public string PrimerNombre { get; set; } = null!;

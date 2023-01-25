@@ -2,9 +2,14 @@
 
 namespace Biblioteca_ProyectoBDII.Controllers
 {
-    public class BrandController : Controller
+    public class AccountController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult SingUp()
         {
             return View();
         }

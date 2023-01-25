@@ -51,8 +51,6 @@ CREATE TABLE  Libro.Editorial(
 	Fecha_Creacion datetime default getdate()
 )
 
-DROP TABLE Libro.Categoria
-GO
 
 CREATE TABLE  Libro.Categoria(
 	IdCategoria int primary key identity,

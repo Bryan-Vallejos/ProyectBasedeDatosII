@@ -12,6 +12,7 @@ public partial class Registro
     public string? Usuario { get; set; }
 
     public string? Contraseña { get; set; }
+    public string? ConfirmarContraseña { get; set; }
 
     public virtual Persona? IdPersonaNavigation { get; set; }
 }
