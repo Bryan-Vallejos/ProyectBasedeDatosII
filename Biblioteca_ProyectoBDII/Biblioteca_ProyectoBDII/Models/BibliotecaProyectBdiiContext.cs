@@ -33,10 +33,6 @@ public partial class BibliotecaProyectBdiiContext : DbContext
 
     public virtual DbSet<TipoPersona> TipoPersonas { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=MARIOSAENZ; Database=BibliotecaProyect_BDII; Trusted_Connection=True; TrustServerCertificate=True");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Autor>(entity =>
@@ -208,9 +204,7 @@ public partial class BibliotecaProyectBdiiContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdPersonaNavigation).WithMany(p => p.Registros)
-                .HasForeignKey(d => d.IdPersona)
-                .HasConstraintName("FK__Registros__IdPer__4BAC3F29");
+            
         });
 
         modelBuilder.Entity<TipoPersona>(entity =>

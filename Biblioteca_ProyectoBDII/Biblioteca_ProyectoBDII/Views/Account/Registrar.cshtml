@@ -1,4 +1,4 @@
-﻿@model Biblioteca_ProyectoBDII.Models.Registro;
+﻿@model Biblioteca_ProyectoBDII.Models.ViewModel.PersonaUsuarioViewModel;
 @{
     Layout = null;
 }
@@ -23,8 +23,8 @@
                     </div>
                     <div class="card-body">
                         <form asp-controller="Account" asp-action="Registrar" method="post">
-                            <input class="form-control mb-3" type="text" placeholder="Usuario" asp-for="Usuario" required />
-                            <input class="form-control mb-3" type="password" placeholder="Contraseña" asp-for="Contraseña" required />
+                            <input class="form-control mb-3" type="text" placeholder="Usuario" asp-for="usuario.Usuario" required />
+                            <input class="form-control mb-3" type="password" placeholder="Contraseña" asp-for="usuario.Contraseña" required />
                             <div>
                                 <button class="btn btn-primary" type="submit">Registrarse</button>
                             </div>

@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BibliotecaProyectBdiiContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("BibliotecaProyectBdiiContext"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BibliotecaProyect_BDIIContext"));
 });
 
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
@@ -42,6 +42,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=Login}/{id?}");
+    pattern: "{controller=Personas}/{action=Create}/{id?}");
 
 app.Run();

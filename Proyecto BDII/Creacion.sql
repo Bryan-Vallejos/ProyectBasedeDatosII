@@ -33,6 +33,7 @@ CREATE TABLE Persona.Persona(
 	Correo varchar(50) not null,
 	Codigo varchar(50),
 	IdTipoPersona int references Persona.Tipo_Persona(IdTipoPersona),
+	IdUsuario int references Administrar.Registros(IdUsuario),
 	Estado bit default 1,
 	Fecha_Creacion datetime default getdate()
 )
@@ -91,8 +92,7 @@ Estado bit default 1,
 )
 
 CREATE TABLE Administrar.Registros(
-IdUsusario int identity(1,1) primary key,
-IdPersona int references Persona.Persona(IdPersona),
+IdUsuario int primary key,
 Usuario varchar(50),
 Contraseña varchar(50)
 )

@@ -7,8 +7,6 @@ public partial class Registro
 {
     public int IdUsusario { get; set; }
 
-    public int? IdPersona { get; set; }
-
     public string? Usuario { get; set; }
 
     public string? Contraseña { get; set; }

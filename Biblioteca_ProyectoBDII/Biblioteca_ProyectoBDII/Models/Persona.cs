@@ -28,6 +28,8 @@ public partial class Persona
 
     public virtual TipoPersona? IdTipoPersonaNavigation { get; set; }
 
+    public int IdUsusario { get; set; }
+
     public virtual ICollection<Prestamo> Prestamos { get; } = new List<Prestamo>();
 
     public virtual ICollection<Registro> Registros { get; } = new List<Registro>();
