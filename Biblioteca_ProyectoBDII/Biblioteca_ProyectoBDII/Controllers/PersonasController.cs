@@ -11,9 +11,9 @@ namespace Biblioteca_ProyectoBDII.Controllers
 {
     public class PersonasController : Controller
     {
-        private readonly BibliotecaProyectBdiiContext _context;
+        private readonly BibliotecaProyect_BDIIContext _context;
 
-        public PersonasController(BibliotecaProyectBdiiContext context)
+        public PersonasController(BibliotecaProyect_BDIIContext context)
         {
             _context = context;
         }
@@ -21,8 +21,8 @@ namespace Biblioteca_ProyectoBDII.Controllers
         // GET: Personas
         public async Task<IActionResult> Index()
         {
-            var bibliotecaProyectBdiiContext = _context.Personas.Include(p => p.IdTipoPersonaNavigation);
-            return View(await bibliotecaProyectBdiiContext.ToListAsync());
+            var bibliotecaProyect_BDIIContext = _context.Personas.Include(p => p.IdTipoPersonaNavigation).Include(p => p.IdUsuarioNavigation);
+            return View(await bibliotecaProyect_BDIIContext.ToListAsync());
         }
 
         // GET: Personas/Details/5
@@ -35,6 +35,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
 
             var persona = await _context.Personas
                 .Include(p => p.IdTipoPersonaNavigation)
+                .Include(p => p.IdUsuarioNavigation)
                 .FirstOrDefaultAsync(m => m.IdPersona == id);
             if (persona == null)
             {
@@ -48,6 +49,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
         public IActionResult Create()
         {
             ViewData["IdTipoPersona"] = new SelectList(_context.TipoPersonas, "IdTipoPersona", "IdTipoPersona");
+            ViewData["IdUsuario"] = new SelectList(_context.Registros, "IdUsuario", "IdUsuario");
             return View();
         }
 
@@ -56,7 +58,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPersona,PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,Correo,Codigo,IdTipoPersona,Estado,FechaCreacion,IdUsusario")] Persona persona)
+        public async Task<IActionResult> Create([Bind("IdPersona,PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,Correo,Codigo,IdTipoPersona,Estado,IdUsuario,FechaCreacion")] Persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -65,6 +67,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdTipoPersona"] = new SelectList(_context.TipoPersonas, "IdTipoPersona", "IdTipoPersona", persona.IdTipoPersona);
+            ViewData["IdUsuario"] = new SelectList(_context.Registros, "IdUsuario", "IdUsuario", persona.IdUsuario);
             return View(persona);
         }
 
@@ -82,6 +85,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
                 return NotFound();
             }
             ViewData["IdTipoPersona"] = new SelectList(_context.TipoPersonas, "IdTipoPersona", "IdTipoPersona", persona.IdTipoPersona);
+            ViewData["IdUsuario"] = new SelectList(_context.Registros, "IdUsuario", "IdUsuario", persona.IdUsuario);
             return View(persona);
         }
 
@@ -90,7 +94,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPersona,PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,Correo,Codigo,IdTipoPersona,Estado,FechaCreacion,IdUsusario")] Persona persona)
+        public async Task<IActionResult> Edit(int id, [Bind("IdPersona,PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,Correo,Codigo,IdTipoPersona,Estado,IdUsuario,FechaCreacion")] Persona persona)
         {
             if (id != persona.IdPersona)
             {
@@ -118,6 +122,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdTipoPersona"] = new SelectList(_context.TipoPersonas, "IdTipoPersona", "IdTipoPersona", persona.IdTipoPersona);
+            ViewData["IdUsuario"] = new SelectList(_context.Registros, "IdUsuario", "IdUsuario", persona.IdUsuario);
             return View(persona);
         }
 
@@ -131,6 +136,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
 
             var persona = await _context.Personas
                 .Include(p => p.IdTipoPersonaNavigation)
+                .Include(p => p.IdUsuarioNavigation)
                 .FirstOrDefaultAsync(m => m.IdPersona == id);
             if (persona == null)
             {
@@ -147,7 +153,7 @@ namespace Biblioteca_ProyectoBDII.Controllers
         {
             if (_context.Personas == null)
             {
-                return Problem("Entity set 'BibliotecaProyectBdiiContext.Personas'  is null.");
+                return Problem("Entity set 'BibliotecaProyect_BDIIContext.Personas'  is null.");
             }
             var persona = await _context.Personas.FindAsync(id);
             if (persona != null)

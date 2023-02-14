@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Biblioteca_ProyectoBDII.Models;
-
-public partial class Categorium
+namespace Biblioteca_ProyectoBDII.Models
 {
-    public int IdCategoria { get; set; }
+    public partial class Categorium
+    {
+        public Categorium()
+        {
+            Libros = new HashSet<Libro>();
+        }
 
-    public string? Descripcion { get; set; }
+        public int IdCategoria { get; set; }
+        public string? Descripcion { get; set; }
+        public bool? Estado { get; set; }
+        public DateTime? FechaCreacion { get; set; }
 
-    public bool? Estado { get; set; }
-
-    public DateTime? FechaCreacion { get; set; }
-
-    public virtual ICollection<Libro> Libros { get; } = new List<Libro>();
+        public virtual ICollection<Libro> Libros { get; set; }
+    }
 }

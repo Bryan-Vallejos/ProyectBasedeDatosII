@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Biblioteca_ProyectoBDII.Models;
-
-public partial class EstadoPrestamo
+namespace Biblioteca_ProyectoBDII.Models
 {
-    public int IdEstadoPrestamo { get; set; }
+    public partial class EstadoPrestamo
+    {
+        public EstadoPrestamo()
+        {
+            Prestamos = new HashSet<Prestamo>();
+        }
 
-    public string? Descripcion { get; set; }
+        public int IdEstadoPrestamo { get; set; }
+        public string? Descripcion { get; set; }
+        public bool? Estado { get; set; }
 
-    public bool? Estado { get; set; }
-
-    public virtual ICollection<Prestamo> Prestamos { get; } = new List<Prestamo>();
+        public virtual ICollection<Prestamo> Prestamos { get; set; }
+    }
 }

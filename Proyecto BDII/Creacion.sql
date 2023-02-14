@@ -94,7 +94,7 @@ Estado bit default 1,
 CREATE TABLE Administrar.Registros(
 IdUsuario int primary key,
 Usuario varchar(50),
-Contraseña varchar(50)
+Contraseña varchar(100)
 )
 go
 
@@ -108,5 +108,5 @@ INSERT INTO Persona.Tipo_Persona(IdTipoPersona, Descripcion) values
 INSERT INTO Administrar.EstadoPrestamos(IdEstadoPrestamo,Descripcion) VALUES
 (1,'Pendiente'),
 (2,'Devuelto')
-
+GO
 select * from Administrar.Registros

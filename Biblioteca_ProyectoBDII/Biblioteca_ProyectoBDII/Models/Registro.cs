@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Biblioteca_ProyectoBDII.Models;
-
-public partial class Registro
+namespace Biblioteca_ProyectoBDII.Models
 {
-    public int IdUsusario { get; set; }
+    public partial class Registro
+    {
+        public Registro()
+        {
+            Personas = new HashSet<Persona>();
+        }
 
-    public string? Usuario { get; set; }
+        public int IdUsuario { get; set; }
+        public string? Usuario { get; set; }
+        public string? Contraseña { get; set; }
 
-    public string? Contraseña { get; set; }
-    public string? ConfirmarContraseña { get; set; }
-
-    public virtual Persona? IdPersonaNavigation { get; set; }
+        public virtual ICollection<Persona> Personas { get; set; }
+    }
 }

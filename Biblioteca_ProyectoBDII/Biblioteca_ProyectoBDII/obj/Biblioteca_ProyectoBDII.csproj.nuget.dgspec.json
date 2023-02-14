@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\ProyectBasedeDatosII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {}
+    "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\ProyectBasedeDatosII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {
+    "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\ProyectBasedeDatosII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
+        "projectUniqueName": "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
         "projectName": "Biblioteca_ProyectoBDII",
-        "projectPath": "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\ProyectBasedeDatosII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
+        "projectPath": "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\ProyectBasedeDatosII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\obj\\",
+        "outputPath": "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,15 +40,27 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
