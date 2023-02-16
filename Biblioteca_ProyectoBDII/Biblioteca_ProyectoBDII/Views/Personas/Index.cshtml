@@ -13,16 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PrimerNombre)
+                @Html.DisplayNameFor(model => model.Nombres)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SegundoNombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrimerApellido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SegundoApellido)
+                @Html.DisplayNameFor(model => model.Apellidos)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Correo)
@@ -37,10 +31,10 @@
                 @Html.DisplayNameFor(model => model.FechaCreacion)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdTipoPersonaNavigation)
+                @Html.DisplayNameFor(model => model.IdNavigation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdUsuarioNavigation)
+                @Html.DisplayNameFor(model => model.IdTipoPersonaNavigation)
             </th>
             <th></th>
         </tr>
@@ -49,16 +43,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.PrimerNombre)
+                @Html.DisplayFor(modelItem => item.Nombres)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SegundoNombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrimerApellido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SegundoApellido)
+                @Html.DisplayFor(modelItem => item.Apellidos)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Correo)
@@ -73,10 +61,10 @@
                 @Html.DisplayFor(modelItem => item.FechaCreacion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdTipoPersonaNavigation.IdTipoPersona)
+                @Html.DisplayFor(modelItem => item.IdNavigation.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdUsuarioNavigation.IdUsuario)
+                @Html.DisplayFor(modelItem => item.IdTipoPersonaNavigation.IdTipoPersona)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdPersona">Edit</a> |

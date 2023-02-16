@@ -1,8 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-#nullable disable
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -41,10 +37,9 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-
             [Required]
-            [EmailAddress]
-            public string Email { get; set; }
+            [Display(Name = "Usuario")]
+            public string UserName { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
@@ -79,9 +74,8 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+                var result = await _signInManager.PasswordSignInAsync(Input.UserName , Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");

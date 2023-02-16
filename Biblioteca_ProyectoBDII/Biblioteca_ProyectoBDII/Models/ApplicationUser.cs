@@ -6,6 +6,5 @@ namespace Biblioteca_ProyectoBDII.Models
     {
         public string? Usuario { get; set; }
 
-       // public virtual Persona? IdPersonaNavigation { get; set; }
     }
 }

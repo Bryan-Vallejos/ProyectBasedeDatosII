@@ -46,6 +46,7 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
             _emailSender = emailSender;
         }
 
+
         [BindProperty]
         public InputModel Input { get; set; }
         public string ReturnUrl { get; set; }

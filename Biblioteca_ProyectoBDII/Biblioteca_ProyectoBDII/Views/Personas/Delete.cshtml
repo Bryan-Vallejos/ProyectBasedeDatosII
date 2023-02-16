@@ -12,28 +12,16 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PrimerNombre)
+            @Html.DisplayNameFor(model => model.Nombres)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PrimerNombre)
+            @Html.DisplayFor(model => model.Nombres)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SegundoNombre)
+            @Html.DisplayNameFor(model => model.Apellidos)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SegundoNombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PrimerApellido)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PrimerApellido)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SegundoApellido)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SegundoApellido)
+            @Html.DisplayFor(model => model.Apellidos)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Correo)
@@ -60,16 +48,16 @@
             @Html.DisplayFor(model => model.FechaCreacion)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdNavigation.Id)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdTipoPersonaNavigation)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.IdTipoPersonaNavigation.IdTipoPersona)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdUsuarioNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdUsuarioNavigation.IdUsuario)
         </dd>
     </dl>
     

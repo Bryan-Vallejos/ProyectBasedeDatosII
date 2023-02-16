@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {}
+    "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {}
   },
   "projects": {
-    "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {
+    "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
+        "projectUniqueName": "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
         "projectName": "Biblioteca_ProyectoBDII",
-        "projectPath": "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
+        "projectPath": "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "D:\\SQL SERVER\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\obj\\",
+        "outputPath": "C:\\Users\\FIT\\Documents\\Visual Studio 2022\\Biblioteca_ProyectoBDII\\Biblioteca_ProyectoBDII\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,17 +54,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[6.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[6.0.14, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.12, )"
             }
           },
           "imports": [
