@@ -1,16 +1,20 @@
-﻿using System;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+#nullable disable
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Biblioteca_ProyectoBDII.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using Biblioteca_ProyectoBDII.Models;
 
 namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
 {
@@ -28,22 +32,28 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
         [BindProperty]
         public InputModel Input { get; set; }
 
+
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
+
         public string ReturnUrl { get; set; }
+
 
         [TempData]
         public string ErrorMessage { get; set; }
 
+
         public class InputModel
         {
+
             [Required]
-            [Display(Name = "Usuario")]
             public string UserName { get; set; }
+
 
             [Required]
             [DataType(DataType.Password)]
             public string Password { get; set; }
+
 
             [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
@@ -74,8 +84,9 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-
-                var result = await _signInManager.PasswordSignInAsync(Input.UserName , Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                var result = await _signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
