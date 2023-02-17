@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Biblioteca_ProyectoBDII.Models;
+using Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account;
 
 namespace Biblioteca_ProyectoBDII.Controllers
 {
@@ -16,6 +17,10 @@ namespace Biblioteca_ProyectoBDII.Controllers
         public PersonasController(BibliotecaProyect_BDIIContext context)
         {
             _context = context;
+        }
+
+        public PersonasController()
+        {
         }
 
         // GET: Personas
@@ -53,13 +58,11 @@ namespace Biblioteca_ProyectoBDII.Controllers
             return View();
         }
 
-        // POST: Personas/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdPersona,Nombres,Apellidos,Correo,Codigo,IdTipoPersona,Id,Estado,FechaCreacion")] Persona persona)
         {
+            
             if (ModelState.IsValid)
             {
                 _context.Add(persona);

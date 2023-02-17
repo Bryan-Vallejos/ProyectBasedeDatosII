@@ -14,20 +14,23 @@
                 </div>
                 <div class="card-body">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <input asp-for="Input.UserName" class="form-control mb-3" placeholder="Nombre de Usuario" aria-required="true" />
-                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    <div>
+                        <input asp-for="Input.UserName" class="form-control mb-3" placeholder="Nombre de Usuario" aria-required="true" />
+                        <span asp-validation-for="Input.UserName" class="text-danger"></span>
 
-                    <input asp-for="Input.Email" class="form-control mb-3" placeholder="Correo" aria-required="true" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        <input asp-for="Input.Email" class="form-control mb-3" placeholder="Correo" aria-required="true" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
 
-                    <input asp-for="Input.Password" class="form-control mb-3" placeholder="Contraseña" autocomplete="new-password" aria-required="true" />
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        <input asp-for="Input.Password" class="form-control mb-3" placeholder="Contraseña" autocomplete="new-password" aria-required="true" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
 
-                    <input asp-for="Input.ConfirmPassword" class="form-control mb-3" placeholder="Confirmar Contraseña" autocomplete="new-password" aria-required="true" />
-                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        <input asp-for="Input.ConfirmPassword" class="form-control mb-3" placeholder="Confirmar Contraseña" autocomplete="new-password" aria-required="true" />
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
 
-                    
-                    <button id="ReModelSubmit" type="submit" class="w-100 btn btn-primary">Registrar</button>
+                    <div class="text-center">
+                        <button id="ReModelSubmit" type="submit" class="w-100 btn btn-primary">Registrar</button>
+                    </div>
                 </div>
             </form>
         </div>
