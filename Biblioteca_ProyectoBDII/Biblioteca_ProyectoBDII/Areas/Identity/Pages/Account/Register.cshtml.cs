@@ -10,24 +10,23 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
-using Biblioteca_ProyectoBDII.Controllers;
-using Biblioteca_ProyectoBDII.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Biblioteca_ProyectoBDII.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly BibliotecaProyect_BDIIContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IUserStore<ApplicationUser> _userStore;
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
@@ -35,12 +34,14 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
+            BibliotecaProyect_BDIIContext context,
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
+            _context = context;
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
@@ -48,23 +49,29 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
         }
-        private readonly BibliotecaProyect_BDIIContext _context;
-        public PersonasController pc = new();
 
+
+        [BindProperty]
+        public InputModel Input { get; set; }
+
+        [BindProperty]
         public Persona Person { get; set; }
 
-        [BindProperty]    
-        public InputModel Input { get; set; }
         public string ReturnUrl { get; set; }
+
+
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
+
 
         public class InputModel
         {
             [Required]
+            [Display(Name = "UserName")]
             public string UserName { get; set; }
 
             [Required]
             [EmailAddress]
+            [Display(Name = "Email")]
             public string Email { get; set; }
 
             [Required]
@@ -75,6 +82,7 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
 
 
             [DataType(DataType.Password)]
+            [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
         }
@@ -98,8 +106,7 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
-                _context.Add(Person);
-                await _context.SaveChangesAsync();
+                
 
                 if (result.Succeeded)
                 {
@@ -117,15 +124,20 @@ namespace Biblioteca_ProyectoBDII.Areas.Identity.Pages.Account
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
-
+                        Person.Id = userId;
+                        _context.Add(Person);
+                        await _context.SaveChangesAsync();
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
+                        
                         return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
                     }
                     else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
+
+                        
                     }
                 }
                 foreach (var error in result.Errors)

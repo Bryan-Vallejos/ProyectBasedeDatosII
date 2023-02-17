@@ -154,9 +154,6 @@ namespace Biblioteca_ProyectoBDII.Models
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Correo)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
 
                 entity.Property(e => e.Estado).HasDefaultValueSql("((1))");
 

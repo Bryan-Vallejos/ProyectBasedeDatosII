@@ -19,10 +19,6 @@ namespace Biblioteca_ProyectoBDII.Controllers
             _context = context;
         }
 
-        public PersonasController()
-        {
-        }
-
         // GET: Personas
         public async Task<IActionResult> Index()
         {

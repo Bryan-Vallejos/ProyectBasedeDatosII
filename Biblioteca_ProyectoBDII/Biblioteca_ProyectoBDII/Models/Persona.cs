@@ -11,26 +11,19 @@ namespace Biblioteca_ProyectoBDII.Models
         {
             Prestamos = new HashSet<Prestamo>();
         }
+
         public int IdPersona { get; set; }
 
-        [Display(Name = "Nombres")]
         public string Nombres { get; set; } = null!;
 
-        [Display(Name = "Apellidos")]
         public string Apellidos { get; set; } = null!;
 
-        [Display(Name = "Correo")]
-        public string Correo { get; set; } = null!;
-
-        [Display(Name = "Codigo")]
         public string? Codigo { get; set; }
 
-        [Display(Name = "Tipo Persona")]
         public int? IdTipoPersona { get; set; }
 
         public string? Id { get; set; }
 
-        [Display(Name = "Estado")]
         public bool? Estado { get; set; }
 
         public DateTime? FechaCreacion { get; set; }
