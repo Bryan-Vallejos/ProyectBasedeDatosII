@@ -37,6 +37,11 @@
                 </div>
                 
                 <button id="registerSubmit" type="submit" class="w-100 btn btn-primary">Registrarse</button>
+                    <div class="text-center">
+                        <p>
+                            ¿Ya tienes una cuenta?<a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl"> ¡Inicia Sesión!</a>
+                        </p>
+                    </div>
                 </div>
         </form>
     </div>

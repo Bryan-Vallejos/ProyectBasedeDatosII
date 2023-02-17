@@ -39,24 +39,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categoriums/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcml1bXNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Autors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categoriums/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcml1bXNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Autors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categoriums/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcml1bXNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Autors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categoriums/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcml1bXNcRWRpdC5jc2h0bWw=
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Autors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categoriums/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcml1bXNcSW5kZXguY3NodG1s
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Autors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categorias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categorias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categorias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categorias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Categorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Editorials/Create.cshtml]
@@ -87,24 +107,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libros/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXENyZWF0ZS5jc2h0bWw=
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libro_s/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9fc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libros/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXERlbGV0ZS5jc2h0bWw=
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libro_s/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9fc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libros/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXERldGFpbHMuY3NodG1s
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libro_s/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9fc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libros/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXEVkaXQuY3NodG1s
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libro_s/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9fc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libros/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXEluZGV4LmNzaHRtbA==
+[C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Libro_s/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9fc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FIT/Documents/Visual Studio 2022/ProyectBasedeDatosII/Biblioteca_ProyectoBDII/Biblioteca_ProyectoBDII/Views/Personas/Create.cshtml]

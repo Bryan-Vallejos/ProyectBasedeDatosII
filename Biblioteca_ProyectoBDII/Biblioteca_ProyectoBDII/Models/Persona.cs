@@ -29,6 +29,7 @@ namespace Biblioteca_ProyectoBDII.Models
         public DateTime? FechaCreacion { get; set; }
 
         public virtual User? IdNavigation { get; set; }
+        [Display(Name = "Tipo Persona")]
         public virtual TipoPersona? IdTipoPersonaNavigation { get; set; }
         public virtual ICollection<Prestamo> Prestamos { get; set; }
     }

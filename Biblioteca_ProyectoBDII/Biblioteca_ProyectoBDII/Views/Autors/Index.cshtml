@@ -1,7 +1,7 @@
-﻿@model IEnumerable<Biblioteca_ProyectoBDII.Models.Editorial>
+﻿@model IEnumerable<Biblioteca_ProyectoBDII.Models.Autor>
 
 @{
-    ViewData["Title"] = "Lista de Editoriales";
+    ViewData["Title"] = "Lista de Autores";
 }
 
 <div class="card shadow mb-4">
@@ -22,7 +22,7 @@
                         <thead>
                             <tr>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.NombreEditorial)
+                                    @Html.DisplayNameFor(model => model.NombreAutor)
                                 </th>
                                 <th>
                                     @Html.DisplayNameFor(model => model.Estado)
@@ -37,7 +37,7 @@
                     @foreach (var item in Model) {
                             <tr>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.NombreEditorial)
+                                    @Html.DisplayFor(modelItem => item.NombreAutor)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Estado)
@@ -46,12 +46,12 @@
                                     @Html.DisplayFor(modelItem => item.FechaCreacion)
                                 </td>
                                 <td>
-                                        <a asp-action="Edit" asp-route-id="@item.IdEditorial" class="btn btn-success">Edit</a> |
-                                        <a asp-action="Details" asp-route-id="@item.IdEditorial" class="btn btn-primary">Details</a> |
-                                        <a asp-action="Delete" asp-route-id="@item.IdEditorial" class="btn btn-danger">Delete</a>
+                                        <a asp-action="Edit" asp-route-id="@item.IdAutor" class="btn btn-success">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.IdAutor" class="btn btn-primary">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.IdAutor" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
-                    }
+                            }
                         </tbody>
                     </table>
                 </div>

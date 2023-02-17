@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Biblioteca_ProyectoBDII.Models.Libro>
+
+@{
+    ViewData["Title"] = "Lista de Libros";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3 bg-primary">
+        <h4 class="m-0 font-weight-bold text-white">@ViewData["Title"]</h4>
+    </div>
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <a asp-action="Create" class="btn btn-success ">Crear</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered" style="width:100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Titulo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Ubicacion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Ejemplares)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Estado)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FechaCreacion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IdAutorNavigation)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IdCategoriaNavigation)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IdEditorialNavigation)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    @foreach (var item in Model) {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Titulo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Ubicacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Ejemplares)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Estado)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FechaCreacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IdAutorNavigation.IdAutor)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.IdCategoria)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IdEditorialNavigation.IdEditorial)
+                                </td>
+                                <td>
+                                        <a asp-action="Edit" asp-route-id="@item.IdLibro" class="btn btn-success">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.IdLibro" class="btn btn-primary">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.IdLibro" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                    }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
