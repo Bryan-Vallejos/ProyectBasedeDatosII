@@ -4,7 +4,7 @@
     ViewData["Title"] = "Registrarse";
 }
 
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-md-4">
     <div class="card">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
@@ -12,27 +12,27 @@
                 <div class="card-body">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div>
-                    <input asp-for="Person.Nombres" class="form-control" placeholder="Nombres" aria-required="true" />
+                    <input asp-for="Person.Nombres" class="form-control mb-3" placeholder="Nombres" aria-required="true" />
                     <span asp-validation-for="Person.Nombres" class="text-danger"></span>
                 </div>
                 <div>
-                    <input asp-for="Person.Apellidos" class="form-control" placeholder="Apellidos" aria-required="true" />
+                    <input asp-for="Person.Apellidos" class="form-control mb-3" placeholder="Apellidos" aria-required="true" />
                     <span asp-validation-for="Person.Apellidos" class="text-danger"></span>
                 </div>
                 <div>
-                    <input asp-for="Input.UserName" class="form-control" placeholder="Correo" autocomplete="username" aria-required="true" />
+                    <input asp-for="Input.UserName" class="form-control mb-3" placeholder="Nombre de Usuario" autocomplete="username" aria-required="true" />
                     <span asp-validation-for="Input.UserName" class="text-danger"></span>
                 </div>
                 <div>
-                    <input asp-for="Input.Email" class="form-control" placeholder="Correo" autocomplete="username" aria-required="true" />
+                    <input asp-for="Input.Email" class="form-control mb-3" placeholder="Correo" autocomplete="username" aria-required="true" />
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div>
-                    <input asp-for="Input.Password" class="form-control" placeholder="Contraseña" autocomplete="new-password" aria-required="true" />
+                    <input asp-for="Input.Password" class="form-control mb-3" placeholder="Contraseña" autocomplete="new-password" aria-required="true" />
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
                 <div>
-                    <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Confirmar Contraseña" autocomplete="new-password" aria-required="true" />
+                    <input asp-for="Input.ConfirmPassword" class="form-control mb-3" placeholder="Confirmar Contraseña" autocomplete="new-password" aria-required="true" />
                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                 </div>
                 

@@ -1,9 +1,11 @@
 ﻿using Biblioteca_ProyectoBDII.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Biblioteca_ProyectoBDII.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
