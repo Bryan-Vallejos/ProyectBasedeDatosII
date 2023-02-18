@@ -20,12 +20,13 @@ namespace Biblioteca_ProyectoBDII.Models
 
         public string? Codigo { get; set; }
 
+        [Display(Name = "Tipo Persona")]
         public int? IdTipoPersona { get; set; }
 
         public string? Id { get; set; }
 
         public bool? Estado { get; set; }
-
+        [Display(Name = "Fecha Creacion")]
         public DateTime? FechaCreacion { get; set; }
 
         public virtual User? IdNavigation { get; set; }
